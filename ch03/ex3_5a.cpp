@@ -11,8 +11,12 @@ using std::endl;
 int main()
 {
     string concatenated;
-    for (string buffer; cin >> buffer; concatenated += buffer);
-    cout << "The concatenated string is " << concatenated << endl;
-
+    string buffer;
+    while(cin>>buffer)
+    {
+        if(buffer=="q")break;
+        concatenated += buffer;
+    }
+    cout<<concatenated<<endl;
     return 0;
 }
